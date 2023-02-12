@@ -21,7 +21,6 @@ function DownloadButton() {
     const link = document.createElement("a");
     link.href = url;
     link.download = "CV1.pdf";
-    
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
