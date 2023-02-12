@@ -14,13 +14,13 @@ function DownloadButton() {
   // };
 
   const handleDownload = async () => {
-    const response = await fetch("CV1.pdf");
+    const response = await fetch("CV Ryan Sepkap.pdf");
     const blob = await response.blob();
 
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "CV1.pdf";
+    link.download = "CV Ryan Sepkap.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -28,11 +28,11 @@ function DownloadButton() {
   };
 
   return (
-    <a href="CV1.pdf" download="CV Ryan Sepkap Developpeur Web.pdf">
+    // <a href="CV1.pdf" download="CV Ryan Sepkap Developpeur Web.pdf">
     <button className="vvd" onClick={handleDownload} disabled={downloading}><span>
     {downloading ? "Downloading..." : "Download Resume"}
   </span></button>
-</a>
+// </a>
 
   );
 }
